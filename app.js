@@ -7,6 +7,7 @@ let amigo = document.getElementById('resultado')
 let nome = document.getElementById('amigo').value
 let listaAmigo = document.getElementById('listaAmigos')
 let listaNomes = []
+let index
 let amigoIndex
 let amigoSecreto
 
@@ -42,7 +43,6 @@ function limparCampo() {
 
 //FUNÇÃO PARA SORTEAR OS AMIGOS INSERIDOS NA LISTA
 function sortearAmigo() {
-  let index
   amigoIndex = Math.floor(Math.random() * listaNomes.length)
   amigoSecreto = listaNomes[amigoIndex]
   amigo.innerText = `${amigoSecreto}`
